@@ -16,10 +16,9 @@ class script(object):
 - /resetallwarns: Delete all the warnings in a chat. All users return to 0 warns.
 - /warnings: Get the chat's warning settings.
 - /setwarnmode <ban/kick/mute>: Set the chat's warn mode.
-- /setwarnlimit <number>: Set the number of warnings before users are punished""
+- /setwarnlimit <number>: Set the number of warnings before users are punished"""
 
-    MANUELFILTER_TXT = """Help: <b>Filters</b>
-
+    
     OWNER_TXT = """<b>🔰 𝙷𝙴𝚈 𝙷𝙴𝚁𝙴 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 🔰</b>"""
     
     HELP_TXT = """𝙷𝙴𝚈 {}
