@@ -41,14 +41,14 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("<b>⚠︎ 𝙳𝙰 𝙼𝚆𝙾𝙽𝚄𝚂𝙴 𝙸𝚃𝙷𝙴 𝙽𝙸𝙽𝙰𝙺𝙴 𝚄𝙻𝙻𝙰𝚃𝙷𝙴 𝙰𝙻𝙻𝙰 𝙺𝙴𝚃𝚃𝙾 ⚠︎</b>", show_alert=True)
+        return await query.answer("⚠︎ 𝙳𝙰 𝙼𝚆𝙾𝙽𝚄𝚂𝙴 𝙸𝚃𝙷𝙴 𝙽𝙸𝙽𝙰𝙺𝙴 𝚄𝙻𝙻𝙰𝚃𝙷𝙴 𝙰𝙻𝙻𝙰 𝙺𝙴𝚃𝚃𝙾 ⚠︎", show_alert=True)
     try:
         offset = int(offset)
     except:
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("<b>⚠︎ 𝚈𝙾𝚄 𝙰𝚁𝙴 𝚄𝚂𝙸𝙽𝙶 𝙼𝚈 𝙾𝙻𝙳 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 , 𝙿𝙻𝙴𝙰𝚂𝙴 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙰𝙶𝙰𝙸𝙽 ⚠︎</b>", show_alert=True)
+        await query.answer("⚠︎ 𝚈𝙾𝚄 𝙰𝚁𝙴 𝚄𝚂𝙸𝙽𝙶 𝙼𝚈 𝙾𝙻𝙳 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 , 𝙿𝙻𝙴𝙰𝚂𝙴 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙰𝙶𝙰𝙸𝙽 ⚠︎", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -120,7 +120,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("<b>⚠︎ 𝙳𝙰 𝙼𝚆𝙾𝙽𝚄𝚂𝙴 𝙸𝚃𝙷𝙴 𝙽𝙸𝙽𝙰𝙺𝙴 𝚄𝙻𝙻𝙰𝚃𝙴 𝙰𝙻𝙻𝙰 𝙺𝙴𝚃𝚃𝙾 ⚠︎</b>", show_alert=True)
+        return await query.answer("⚠︎ 𝙳𝙰 𝙼𝚆𝙾𝙽𝚄𝚂𝙴 𝙸𝚃𝙷𝙴 𝙽𝙸𝙽𝙰𝙺𝙴 𝚄𝙻𝙻𝙰𝚃𝙴 𝙰𝙻𝙻𝙰 𝙺𝙴𝚃𝚃𝙾 ⚠︎", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
@@ -156,11 +156,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat = await client.get_chat(grpid)
                     title = chat.title
                 except:
-                    await query.message.edit_text("<b>⚠︎ 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝙸𝙰𝙼 𝙿𝚁𝙴𝚂𝙴𝙽𝚃 𝙸𝙽 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿☯︎☜︎︎︎☜︎︎︎ ⚠︎</b>", quote=True)
+                    await query.message.edit_text("⚠︎ 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝙸𝙰𝙼 𝙿𝚁𝙴𝚂𝙴𝙽𝚃 𝙸𝙽 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ⚠︎", quote=True)
                     return await query.answer('Piracy Is Crime')
             else:
                 await query.message.edit_text(
-                    "<b>⚠︎ 𝙸𝙰𝙼 𝙽𝙾𝚃 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳 𝚃𝙾 𝙰𝙽𝚈 𝙶𝚁𝙾𝚄𝙿 ⚠︎</b>\nCheck /connections or connect to any groups",
+                    "⚠︎ 𝙸𝙰𝙼 𝙽𝙾𝚃 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳 𝚃𝙾 𝙰𝙽𝚈 𝙶𝚁𝙾𝚄𝙿 ⚠︎\nCheck /connections or connect to any groups",
                     quote=True
                 )
                 return await query.answer('Piracy Is Crime')
@@ -431,7 +431,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Here You Go')
+        await query.answer()
     elif query.data == "owner":
         buttons = [[       
             InlineKeyboardButton('🔰 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🔰', callback_data='manuelfilter'),
@@ -744,7 +744,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🔰 𝙷𝙴𝚁𝙴 𝚆𝙷𝙰𝚃 𝙸 𝙵𝙾𝚄𝙽𝙳 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁 𝚀𝚄𝙴𝚁𝚈  🔰</b>{search}"
+        cap = f"🔰 𝙷𝙴𝚁𝙴 𝚆𝙷𝙰𝚃 𝙸 𝙵𝙾𝚄𝙽𝙳 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁 𝚀𝚄𝙴𝚁𝚈  🔰{search}"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -771,7 +771,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("<b>⚠︎ 𝙸 𝙲𝙾𝚄𝙻𝙳 𝙽𝙾𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈 𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 ⚠︎</b>")
+        k = await msg.reply("⚠︎ 𝙸 𝙲𝙾𝚄𝙻𝙳 𝙽𝙾𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈 𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 ⚠︎")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -800,7 +800,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("<b>⚠︎  𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 . 𝙲𝙷𝙴𝙲𝙺 𝚈𝙾𝚄 𝚂𝙿𝙴𝙻𝙻𝙸𝙽𝙶 ⚠︎</b>")
+        k = await msg.reply("⚠︎  𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 . 𝙲𝙷𝙴𝙲𝙺 𝚈𝙾𝚄 𝚂𝙿𝙴𝙻𝙻𝙸𝙽𝙶 ⚠︎")
         await asyncio.sleep(8)
         await k.delete()
         return
