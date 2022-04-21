@@ -125,9 +125,9 @@ async def advantage_spoll_choker(bot, query):
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
     if not movies:
-        return await query.answer("<b>⚠︎ 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙲𝙻𝙸𝙲𝙺𝙸𝙽𝙶 𝙾𝙽 𝙼𝚈 𝙾𝙻𝙳 𝙱𝚄𝚃𝚃𝙾𝙽 ⚠︎</b>", show_alert=True)
+        return await query.answer("⚠︎ 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙲𝙻𝙸𝙲𝙺𝙸𝙽𝙶 𝙾𝙽 𝙼𝚈 𝙾𝙻𝙳 𝙱𝚄𝚃𝚃𝙾𝙽 ⚠︎", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('<b>𝙲𝙷𝙴𝙲𝙺𝙸𝙽𝙶 𝙵𝙾𝚁 𝙼𝙾𝚅𝙸𝙴 𝙸𝙽 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴....</b>')
+    await query.answer('𝙲𝙷𝙴𝙲𝙺𝙸𝙽𝙶 𝙵𝙾𝚁 𝙼𝙾𝚅𝙸𝙴 𝙸𝙽 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴....')
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -195,7 +195,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("<b>⚠︎ 𝚃𝙷𝙰𝚃'𝚂 𝙽𝙾𝚃 𝙵𝙾𝚁 𝚈𝙾𝚄 ! ⚠︎</b>", show_alert=True)
+                await query.answer("⚠︎ 𝚃𝙷𝙰𝚃'𝚂 𝙽𝙾𝚃 𝙵𝙾𝚁 𝚈𝙾𝚄 ! ⚠︎", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -354,6 +354,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('MOVIE', url='https://t.me/movie_lookam')
             ]
             ]]
+        reply_markup = InlineKeyboardMarkup(buttons),
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
@@ -369,7 +370,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     reply_markup = InlineKeyboardMarkup(buttons),
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('<b>🍁 𝙷𝙴𝚈 𝙲𝙷𝙴𝙲𝙺 𝙿𝙼 𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙵𝙸𝙻𝙴 𝙸𝙽 𝙿𝙼 🍁</b>', show_alert=True)
+                await query.answer('🍁 𝙷𝙴𝚈 𝙲𝙷𝙴𝙲𝙺 𝙿𝙼 𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙵𝙸𝙻𝙴 𝙸𝙽 𝙿𝙼 🍁', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
@@ -403,12 +404,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('MOVIE', url='https://t.me/movie_lookam')
             ]
             ]]
+        reply_markup = InlineKeyboardMarkup(buttons),
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
-            reply_markup = InlineKeyboardMarkup(buttons),
+
             protect_content=True if ident == 'checksubp' else False
         )
     elif query.data == "pages":
