@@ -354,7 +354,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('MOVIE', url='https://t.me/movie_lookam')
             ]
             ]
-        reply_markup = InlineKeyboardMarkup(buttons),
+        
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
@@ -372,7 +372,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 await query.answer('🍁 𝙷𝙴𝚈 𝙲𝙷𝙴𝙲𝙺 𝙿𝙼 𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙵𝙸𝙻𝙴 𝙸𝙽 𝙿𝙼 🍁', show_alert=True)
         except UserIsBlocked:
-            await query.answer('Unblock the bot mahn !', show_alert=True)
+            await query.answer('𝚄𝙽𝙱𝙻𝙾𝙲𝙺 𝚃𝙷𝙴 𝙱𝙾𝚃 𝙼𝙰𝙷𝙽 !', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
@@ -410,7 +410,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
-
+            reply_markup = InlineKeyboardMarkup(buttons),
             protect_content=True if ident == 'checksubp' else False
         )
     elif query.data == "pages":
