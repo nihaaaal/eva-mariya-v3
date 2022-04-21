@@ -351,7 +351,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
         buttons = [
             [
-                InlineKeyboardButton('MOVIE', url='https://t.me/movie_lookam')
+                InlineKeyboardButton('⭕ 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/movie_lookam')
             ]
             ]
         
@@ -401,7 +401,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         buttons  = [
             [
-                 InlineKeyboardButton('MOVIE', url='https://t.me/movie_lookam')
+                 InlineKeyboardButton('⭕ 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/movie_lookam')
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons),
@@ -435,7 +435,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "owner":
         buttons = [[       
             InlineKeyboardButton('🔰 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🔰', callback_data='manuelfilter'),
-            InlineKeyboardButton('🔰 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 🔰', callback_data='autofilter')
+            InlineKeyboardButton('🔰 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 🔰', url='https://t.me/NL_MP4')
         ], [
             InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='start')
         ]]
@@ -694,7 +694,7 @@ async def auto_filter(client, msg, spoll=False):
         req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton(text="NEXT ⏩", callback_data=f"next_{req}_{key}_{offset}")]
+             InlineKeyboardButton(text="𝙽𝙴𝚇𝚃 ⏩", callback_data=f"next_{req}_{key}_{offset}")]
         )
 
         btn.insert(0, [
