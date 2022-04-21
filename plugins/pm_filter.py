@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('𝚃𝙷𝙸𝚂 𝙼𝙾𝚅𝙸𝙴 𝙽𝙾𝚃 𝙵𝙾𝚄𝙽𝙳 𝙸𝙽 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴')
+            k = await query.message.edit('⚠️ 𝚃𝙷𝙸𝚂 𝙼𝙾𝚅𝙸𝙴 𝙽𝙾𝚃 𝙵𝙾𝚄𝙽𝙳 𝙸𝙽 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 ⚠️')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -351,7 +351,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
         buttons = [
             [
-                InlineKeyboardButton('⭕ 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/movie_lookam')
+                InlineKeyboardButton('🎪 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 🎪', url='https://t.me/movie_lookam')
             ]
             ]
         
@@ -401,7 +401,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         buttons  = [
             [
-                 InlineKeyboardButton('⭕ 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/movie_lookam')
+                 InlineKeyboardButton('🎪 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 🎪', url='https://t.me/movie_lookam')
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons),
@@ -434,10 +434,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "owner":
         buttons = [[       
-            InlineKeyboardButton('🔰 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🔰', callback_data='manuelfilter'),
+            InlineKeyboardButton('🔰 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🔰', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y='),
             InlineKeyboardButton('🔰 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 🔰', url='https://t.me/NL_MP4')
         ], [
-            InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='start')
+            InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='start'),
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
