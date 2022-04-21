@@ -6,6 +6,20 @@ class script(object):
 Keep your members in check with warnings; stop them getting out of control!
 If you're looking for automated warnings, read about the blacklist module!
 
+<b>⚠️ 𝙰𝙳𝙼𝙸𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 ⚠️</b>:
+- /warn <reason>: Warn a user.
+- /dwarn <reason>: Warn a user by reply, and delete their message.
+- /swarn <reason>: Silently warn a user, and delete your message.
+- /warns: See a user's warnings.
+- /rmwarn: Remove a user's latest warning.
+- /resetwarn: Reset all of a user's warnings to 0.
+- /resetallwarns: Delete all the warnings in a chat. All users return to 0 warns.
+- /warnings: Get the chat's warning settings.
+- /setwarnmode <ban/kick/mute>: Set the chat's warn mode.
+- /setwarnlimit <number>: Set the number of warnings before users are punished""
+
+    MANUELFILTER_TXT = """Help: <b>Filters</b>
+
     OWNER_TXT = """<b>🔰 𝙷𝙴𝚈 𝙷𝙴𝚁𝙴 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 🔰</b>"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
