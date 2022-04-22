@@ -420,7 +420,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='owner'),
-            InlineKeyboardButton('⭕ ɢʀᴏᴜᴘ ⭕', url='https://t.me/movie_lookam')
+            InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url='https://t.me/movie_lookam')
         ], [
             InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
@@ -431,7 +431,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer()
+        await query.answer('')
     elif query.data == "owner":
         buttons = [[       
             InlineKeyboardButton('🔰 ɪɴsᴛᴀɢʀᴀᴍ 🔰', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y='),
@@ -446,7 +446,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
+        await query.answer('')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('ᴍᴀɴᴜʟᴀ ғɪʟᴛᴇʀ', callback_data='manuelfilter'),
@@ -466,7 +466,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('⭕ ɢʀᴏᴜᴘ ⭕', url='https://t.me/TeamEvamaria'),
+            InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url='https://t.me/TeamEvamaria'),
             InlineKeyboardButton('♥ sᴏᴜʀᴄᴇ', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 ʜᴏᴍᴇ', callback_data='start'),
