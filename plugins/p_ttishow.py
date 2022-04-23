@@ -48,12 +48,15 @@ async def save_group(bot, message):
         settings = await get_settings(message.chat.id)
         if settings["welcome"]:
             for u in message.new_chat_members:
+                buttons = [[
+                InlineKeyboardButton('⚠️ ɢʀᴏᴜᴘ ʀᴜʟᴇs ⚠️', callback'rules'")
+            ]]
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
                         await (temp.MELCOW['welcome']).delete()
                     except:
-                        pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>❀ 𝙷𝙴𝙻𝙻𝙾 𝙼𝚈 𝙵𝚁𝙸𝙴𝙽𝙳, {u.mention},𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 {message.chat.title} ❀</b>")
+                        pas
+                temp.MELCOW['welcome'] = await message.reply(f"<b>❀ 𝙷𝙴𝙻𝙻𝙾 𝙼𝚈 𝙵𝚁𝙸𝙴𝙽𝙳, 💖 {u.mention} 💖 ,𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 {message.chat.title} ❀</b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
