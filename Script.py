@@ -25,9 +25,7 @@ Movie songs, trailers, reviews, collection reports, mobile applications, games, 
 
 Once the reply message is asked again the mute will be muted
 
-Look at the website above and find that the movie you are looking for is not subtitled if you do not find the subtitle.
-
-</b>"""
+Look at the website above and find that the movie you are looking for is not subtitled if you do not find the subtitle</b>"""
     
     OWNER_TXT = """<b>🔰 𝙷𝙴𝚈 𝙷𝙴𝚁𝙴 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 🔰</b>"""
     HELP_TXT = """𝙷𝙴𝚈 {}
