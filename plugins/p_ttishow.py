@@ -55,8 +55,10 @@ async def save_group(bot, message):
                     try:
                         await (temp.MELCOW['welcome']).delete()
                     except:
-                        pas
-                temp.MELCOW['welcome'] = await message.reply(f"<b>❀ 𝙷𝙴𝙻𝙻𝙾 𝙼𝚈 𝙵𝚁𝙸𝙴𝙽𝙳, 💖 {u.mention} 💖 ,𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 {message.chat.title} ❀</b>")
+                        pass
+                temp.MELCOW['welcome'] = await message.reply_text(
+                text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 Official Projects Channels 👇</b>",
+                disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
