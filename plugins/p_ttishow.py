@@ -60,6 +60,19 @@ async def save_group(bot, message):
                 text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 Official Projects Channels 👇</b>",
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
+                                     
+        await query.answer('')
+    elif query.data == "rules":
+        buttons = [[      
+            InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('🔒 ᴄʟᴏsᴇ', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.RULE_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
