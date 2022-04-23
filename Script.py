@@ -1,31 +1,8 @@
 class script(object):
     START_TXT = """<b>⌬ 𝙷𝙴𝙻𝙻𝙾 𝙼𝚈 𝙵𝚁𝙸𝙴𝙽𝙳 {} ⌬</b>,
 <b>⌬ 𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝚂𝙴𝙴 𝙼𝚈 𝙿𝙾𝚆𝙴𝚁 😌</b>"""
-    RULE_TXT = """<b>Cinema Only movie topics and related topics are allowed in the group. Non-movie related conversations are strictly prohibited in the group.
-
-(Please Use This Group For Movie Requesting As Per Rules. No Other Talks Allowed.)
-
-Be polite to all members and admins of the group.
-
-Porn Movies and B Grade Movies are not posted. Warn or Ban if asked.
-
-(We Do Not Share Porn Content. Don't Ask Them.)
-
-Cam Rip, PreDVDRip, DVDSCR, HDTS, Censor Board leaked Movies, Leaked Scenes etc. Do not share or ask in this group,
-
-Unnecessary stickers, Gifs, messages and links that are against the group will be deleted and punished by the admins for no reason.
-
-If you do not know the exact spelling of the movie, request it only after looking it up in Google or using the imdb bot (@imdb).
-
-Mention the request only if no reply is received within 12 hours after requesting. In the meanwhile Warn will give it if it keeps re-mentioning.
-
-Movie songs, trailers, reviews, collection reports, mobile applications, games, etc. are not shared with the group. 
-
- None of the content posted on this page is our own. Or if you think we are using your content, contact the admin and the content will be removed.
-
-Once the reply message is asked again the mute will be muted
-
-Look at the website above and find that the movie you are looking for is not subtitled if you do not find the subtitle</b>"""
+    RULE_TXT = """<b>
+</b>"""
     
     OWNER_TXT = """<b>🔰 𝙷𝙴𝚈 𝙷𝙴𝚁𝙴 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 🔰</b>"""
     HELP_TXT = """𝙷𝙴𝚈 {}
