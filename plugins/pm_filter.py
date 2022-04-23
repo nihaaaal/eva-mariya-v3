@@ -432,18 +432,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
         await query.answer('')
-    elif query.data == "rules":
-        buttons = [[      
-            InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='start'),
-            InlineKeyboardButton('🔒 ᴄʟᴏsᴇ', callback_data='close_data')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.RULE_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-        await query.answer('')
     elif query.data == "owner":
         buttons = [[       
             InlineKeyboardButton('🔰 ɪɴsᴛᴀɢʀᴀᴍ 🔰', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y='),
