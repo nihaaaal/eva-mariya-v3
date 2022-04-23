@@ -49,7 +49,7 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 buttons = [[
-                        InlineKeyboardButton('⚠️ rules ⚠️', callback_data='rules'")
+                InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='owner'")
             ]]
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
@@ -57,23 +57,10 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 Official Projects Channels 👇</b>",
+                text=f"<b>🍁 ʜʏ ᴍʏ ғʀɪᴇɴᴅ 💖 {u.mention} 💖,</b> ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ <b>{message.chat.title} 🍁</b>",
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
                                      
-        await query.answer('')
-    elif query.data == "rules":
-        buttons = [[      
-            InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='start'),
-            InlineKeyboardButton('🔒 ᴄʟᴏsᴇ', callback_data='close_data')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.RULE_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
     if len(message.command) == 1:
