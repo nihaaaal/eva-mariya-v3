@@ -57,7 +57,7 @@ async def save_group(bot, message):
                     except:
                         pas
                 temp.MELCOW['welcome'] = await message.reply(f"<b>❀ 𝙷𝙴𝙻𝙻𝙾 𝙼𝚈 𝙵𝚁𝙸𝙴𝙽𝙳, 💖 {u.mention} 💖 ,𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 {message.chat.title} ❀</b>")
-
+                reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
