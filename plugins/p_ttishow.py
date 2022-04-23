@@ -37,8 +37,8 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('🍿 𝙶𝚁𝙾𝚄𝙿 🍿', url='https://t.me/movie_lookam')
+            InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url='https://t.me/movie_lookam')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -57,7 +57,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>🍁 ʜʏ ᴍʏ ғʀɪᴇɴᴅ 💖 {u.mention} 💖,</b> <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ</b> <b>{message.chat.title} 🍁</b>",
+                text=f"<b>🍁 ʜᴇʟʟᴏ ᴍʏ ғʀɪᴇɴᴅ  {u.mention} ,</b> <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ</b> <b>{message.chat.title} 🍁</b>",
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
                                      
