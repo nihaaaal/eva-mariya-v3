@@ -49,7 +49,7 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 buttons = [[
-                    InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='owner')
+                    InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='rule')
             ]]
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
@@ -57,7 +57,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>🍁 ʜʏ ᴍʏ ғʀɪᴇɴᴅ 💖 {u.mention} 💖,</b> ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ <b>{message.chat.title} 🍁</b>",
+                text=f"<b>🍁 ʜʏ ᴍʏ ғʀɪᴇɴᴅ 💖 {u.mention} 💖,</b> <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ</b> <b>{message.chat.title} 🍁</b>",
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
                                      
