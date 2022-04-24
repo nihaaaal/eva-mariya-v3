@@ -56,9 +56,9 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>🍁 ʜᴇʟʟᴏ ᴍʏ ғʀɪᴇɴᴅ  {u.mention} ,</b> <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ</b> <b>{message.chat.title} 🍁</b>",
-                disable_web_page_preview = True,
+                temp.MELCOW['welcome'] = await message.reply_video(
+                video="https://telegra.ph/file/922ba803c3e701590dc97.mp4",
+                caption=f"<b>🍁 ʜᴇʟʟᴏ ᴍʏ ғʀɪᴇɴᴅ  {u.mention} ,</b> <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ</b> <b>{message.chat.title} 🍁</b>",                
                 reply_markup=InlineKeyboardMarkup(buttons))
                                      
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
