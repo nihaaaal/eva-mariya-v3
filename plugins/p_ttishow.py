@@ -51,7 +51,7 @@ async def save_group(bot, message):
                 buttons = [[
                     InlineKeyboardButton('⚠️ ɢʀᴏᴜᴘ ʀᴜʟᴇs ⚠️', callback_data='rule')
             ]]
-            reply_markup=InlineKeyboardMarkup(buttons))
+    
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
                         await (temp.MELCOW['welcome']).delete()
