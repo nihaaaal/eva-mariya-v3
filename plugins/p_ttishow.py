@@ -48,10 +48,9 @@ async def save_group(bot, message):
         settings = await get_settings(message.chat.id)
         if settings["welcome"]:
             for u in message.new_chat_members:
-                reply_markup=InlineKeyboardMarkup([[
-                    InlineKeyboardButton('⚠️ ɢʀᴏᴜᴘ ʀᴜʟᴇs ⚠️', callback_data='rule')
-                    ]]
-                    )
+                buttons = [[
+                InlineKeyboardButton('👉 ⚠️ Press me... 🥰 👈', url="https://t.me/josprojects")
+            ]]
     
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
