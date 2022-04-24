@@ -62,7 +62,7 @@ async def save_group(bot, message):
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
 
-        await client.send_video(chat_id=message.chat.id, video='CAACAgUAAxkBAAJ1k2IfDr7l8Hat1d-s1mnbBEsFXZWJAAL5BAACAdz5VOVw2x38ZZJ1HgQ', reply_markup=reply_markup, reply_to_message_id=message.message_id)
+        await client.send_video(chat_id=message.chat.id, video='https://telegra.ph/file/922ba803c3e701590dc97.mp4', reply_markup=reply_markup, reply_to_message_id=message.message_id)
         await asyncio.sleep(60)
                     
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
