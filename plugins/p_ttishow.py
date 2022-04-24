@@ -51,6 +51,7 @@ async def save_group(bot, message):
                 buttons = [[
                     InlineKeyboardButton('⚠️ ɢʀᴏᴜᴘ ʀᴜʟᴇs ⚠️', callback_data='rule')
             ]]
+            reply_markup=InlineKeyboardMarkup(buttons))
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
                         await (temp.MELCOW['welcome']).delete()
@@ -58,8 +59,8 @@ async def save_group(bot, message):
                         pass
                 temp.MELCOW['welcome'] = await message.reply_video(
                 video="https://telegra.ph/file/922ba803c3e701590dc97.mp4",
-                caption=f"<b>🍁 ʜᴇʟʟᴏ ᴍʏ ғʀɪᴇɴᴅ  {u.mention} ,</b> <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ</b> <b>{message.chat.title} 🍁</b>",
-                reply_markup=InlineKeyboardMarkup(buttons))
+                caption=f"<b>🍁 ʜᴇʟʟᴏ ᴍʏ ғʀɪᴇɴᴅ  {u.mention} ,</b> <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ</b> <b>{message.chat.title} 🍁</b>"
+                
                                      
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
