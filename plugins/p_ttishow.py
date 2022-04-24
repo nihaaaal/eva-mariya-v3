@@ -61,12 +61,7 @@ async def save_group(bot, message):
                 video="https://telegra.ph/file/922ba803c3e701590dc97.mp4",
                 caption=f"<b>💖 ʜᴇʟʟᴏ ᴍʏ ғʀɪᴇɴᴅ {u.mention},</b> <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ</b> <b>{message.chat.title} 💖</b>",
                 reply_markup=InlineKeyboardMarkup(buttons))
-        await client.send_video(chat_id=message.chat.id, video='https://telegra.ph/file/922ba803c3e701590dc97.mp4', reply_markup=reply_markup, reply_to_message_id=message.message_id)
-        await asyncio.sleep(60)
-       
-
-        
-                    
+              
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
     if len(message.command) == 1:
